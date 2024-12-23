@@ -21,7 +21,7 @@ class _CameraScreenState extends State<CameraScreen> {
     _initializeCamera();
   }
 
-  // Inicializar a câmera
+  // Inicializa a câmera
   void _initializeCamera() async {
     _cameras = await availableCameras();
     _controller = CameraController(_cameras[0], ResolutionPreset.high);
@@ -55,7 +55,7 @@ class _CameraScreenState extends State<CameraScreen> {
                   _image = image;
                 });
 
-                // Processar a imagem capturada
+                // Processa a imagem capturada
                 if (_image != null) {
                   String codigoDeco = await processImageRecognition(_image!);
                   print("Código da Decoração: $codigoDeco");
